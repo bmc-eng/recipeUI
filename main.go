@@ -8,6 +8,7 @@ func IndexHandler(c *gin.Context) {
 
 func main() {
 	router := gin.Default()
+	router.Static("/assets", "./assets")
 	router.GET("/", IndexHandler)
 	router.Run()
 }
