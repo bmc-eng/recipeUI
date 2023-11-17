@@ -24,19 +24,6 @@ type Ingredient struct {
 var recipes []Recipe
 
 func IndexHandler(c *gin.Context) {
-	recipes := make([]Recipe, 0)
-	recipes = append(recipes, Recipe{
-		Name:    "Burger",
-		Picture: "/assets/images/burger.jpg",
-	})
-	recipes = append(recipes, Recipe{
-		Name:    "Pizza",
-		Picture: "/assets/images/pizza.jpg",
-	})
-	recipes = append(recipes, Recipe{
-		Name:    "Tacos",
-		Picture: "/assets/images/tacos.jpg",
-	})
 	c.HTML(http.StatusOK, "index.tmpl", gin.H{
 		"recipes": recipes,
 	})
